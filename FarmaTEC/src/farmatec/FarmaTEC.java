@@ -71,10 +71,7 @@ public class FarmaTEC {
         tolis.append(farmacia2);
         tolis.append(farmacia3);
         System.out.println("Lista: " + tolis.toString());
-        
-        
-   
-        
+            
         tolis.goToPos(0);
         tolis.remove();
         System.out.println("Lista Modificada: " + tolis.toString());
