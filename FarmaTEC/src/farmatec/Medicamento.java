@@ -15,6 +15,9 @@ public class Medicamento {
      private String Efectos_Secundarios;
      public int Cantidad_Disponible;
      
+     
+     //
+     
     // Constructor Vacio______________________________________
     public Medicamento(){
          

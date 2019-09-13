@@ -1,6 +1,6 @@
 
 package farmatec;
-
+//
 
 public class Nodo {
     

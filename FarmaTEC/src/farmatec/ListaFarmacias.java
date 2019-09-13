@@ -58,7 +58,7 @@ public class ListaFarmacias {
         this.size = 0;
         this.position = -1;
     }
-    
+    //
     public ListaFarmacias(ListaFarmacias lista){
     }
     
