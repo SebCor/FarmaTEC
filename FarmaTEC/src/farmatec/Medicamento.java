@@ -13,7 +13,7 @@ public class Medicamento {
      private String Tipo_Medicamento;
      private String Dosis;
      private String Efectos_Secundarios;
-     private int Cantidad_Disponible;
+     public int Cantidad_Disponible;
      
     // Constructor Vacio______________________________________
     public Medicamento(){

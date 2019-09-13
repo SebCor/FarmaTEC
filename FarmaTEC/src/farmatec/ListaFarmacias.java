@@ -2,6 +2,47 @@
 package farmatec;
 
 public class ListaFarmacias {
+    
+    
+    public class Nodo {
+    
+    private Farmacia farm;
+    private Nodo next;
+    
+    public Nodo(){
+        this.farm = null;
+        this.next = null ;
+    }
+    
+    public Nodo(Object farm){
+        this.farm = (Farmacia) farm;
+        this.next = null;
+    }
+    public Nodo(Object farm, Nodo next) {
+        this.farm = (Farmacia) farm;
+        this.next = next;
+    }
+
+    public Object getElemento() {
+        return farm;
+    }
+
+    public void setElemento(Object farm) {
+        this.farm = (Farmacia) farm;
+    }
+
+    public Nodo getNext() {
+        return this.next;
+    }
+
+    public void setNext(Nodo next) {
+        this.next = next;
+    }
+    
+    
+    
+}
+
  
     Nodo head;
     Nodo current;
@@ -9,6 +50,7 @@ public class ListaFarmacias {
     int position;
     int size;
     
+ 
     public ListaFarmacias(){
         this.head = new Nodo();
         this.current = this.head;
@@ -52,9 +94,9 @@ public class ListaFarmacias {
         }   
         
     
-    public void insert(Object medicamento) {
+    public void insert(Lista_Medicamentos lista) {
 		//insertar en cualquier posiciÃ³n
-		Nodo newNode = new Nodo(medicamento, this.current.getNext());
+		Nodo newNode = new Nodo(lista, this.current.getNext());
 		this.current.setNext(newNode);
 		//necesario si se está insertando al final de la lista
 		if (this.current == this.tail) {
@@ -124,7 +166,7 @@ public class ListaFarmacias {
 			}
 		}
     }
-   
+
     @Override
     public String toString() {
          Nodo currentNode;
@@ -142,6 +184,56 @@ public class ListaFarmacias {
            }
            return result.toString();
     } 
+    
+    
+    
+    public String toSTR() {
+         Nodo currentNode;
+         currentNode = this.head.getNext();
+
+         StringBuffer result = new StringBuffer();
+
+          for (int i = 0; currentNode != null; i++) {
+                if (i > 0) {
+                    result.append(",");
+                }
+                Object element = (Object) currentNode.getElemento();		
+                result.append(element == null ? "" : element);
+                currentNode = currentNode.getNext();
+           }
+           return result.toString();
+           
+           
+    }
+           
+           
+           
+     public void gotoName(String nombre){
+         this.current = this.head;
+         this.current= this.current.getNext();
+         if (this.current == this.tail){
+             System.out.println("Ultimo Nodo");
+         }
+         
+         while (current != null){
+             if (nombre.equals(current.farm.getNombre())){
+                 System.out.print("AK7");
+                 break;
+             }else{
+                 this.current=this.current.getNext();
+             }
+     }
+           
+           
+           
+           
+    } 
+    
+    
+    
+    
+    
+    
 }   
         
     

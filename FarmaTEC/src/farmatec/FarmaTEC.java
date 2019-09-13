@@ -3,13 +3,11 @@ package farmatec;
 public class FarmaTEC {
 
     public static void main(String[] args) {
-        ListaFarmacias tolis = new ListaFarmacias();
-
-        Lista_Medicamentos meds= new Lista_Medicamentos();
+        
         
        
         // Creacion de Farmacias_______________________________________________________
-        Farmacia farmacia1 = new Farmacia();
+        /*Farmacia farmacia1 = new Farmacia();
         farmacia1.setNombre("Bolillitos");
         farmacia1.setCedula("3-516-135895");
         farmacia1.setUbicacion("San Marcos");
@@ -89,12 +87,66 @@ public class FarmaTEC {
         System.out.println("Lista Modificada: " + tolis.toString());
         System.out.println("ACA SEGUIRIA SIN EL ELEMENTO");
         System.out.println(meds.toString());
-        System.out.println("________________________________________________________________");
+        System.out.println("________________________________________________________________");*/
         
      
+ 
+
+        Lista_Medicamentos meds= new Lista_Medicamentos();
+        ListaFarmacias list1 = new ListaFarmacias();
+        
+        Farmacia farmacia1 = new Farmacia();
+        farmacia1.setNombre("Bolillitos");
+        farmacia1.setCedula("3-516-135895");
+        farmacia1.setUbicacion("San Marcos");
+        farmacia1.setInfoContacto("6151-6354");
+        
+        
+        Farmacia farmacia2 = new Farmacia();
+        farmacia2.setNombre("La bomba");
+        farmacia2.setCedula("6-561-165187");
+        farmacia2.setUbicacion("Cartaguito");
+        farmacia2.setInfoContacto("5619-4981");
+        
+
+        
+        
+        
+        //2 medicamentos____________________________________
+        Medicamento paracetamol = new Medicamento();
+        paracetamol.setNombre("Paracetamol");
+        Medicamento cocaina = new Medicamento();
+        cocaina.setNombre("Cocaina");
+        cocaina.setCantidad_Disponible(3);
+        //2 medicamentos____________________________________
+        
+        
+        meds.append(paracetamol);
+        meds.append(cocaina);
+        
+        System.err.println(meds.toString());
+        System.err.println("UN CUATRO PORFA: " + cocaina.getCantidad_Disponible());
+        list1.append(farmacia2);
+        list1.append(farmacia1);
+       
+        
+        list1.gotoName("Bolillitos");
+        Farmacia f1 =(Farmacia)list1.getElement();
+        Lista_Medicamentos lb = f1.listameds;
+        lb.append(cocaina);
+        lb.append(paracetamol);
+        /*System.out.println("Medicamentos tipo cocaina disponibles: " + );
+        /*System.err.println(cocaina.getCantidad_Disponible());*/
+      
+        System.err.println(f1.getNombre()+ ": " + lb.toString());
         
         
         
         
         
-    }}
+        
+        
+        
+        
+    }
+}

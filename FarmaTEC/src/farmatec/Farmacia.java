@@ -1,15 +1,19 @@
 
 package farmatec;
 
-public class Farmacia<T> {
+public class Farmacia {
     private String Nombre;
     private String Cedula;
     private String Ubicacion;
     private String InfoContacto;
-    private Lista_Medicamentos LISTA;
+    public Lista_Medicamentos listameds;
     
     
-    public Farmacia(){     
+    
+    
+    public Farmacia(){
+        listameds= new Lista_Medicamentos();
+
     }
 
     public String getNombre() {
@@ -44,8 +48,7 @@ public class Farmacia<T> {
         this.InfoContacto = InfoContacto;
     } 
     
-    public Lista_Medicamentos getListamed(){
-        return LISTA;
+ 
     }
     
     
@@ -53,7 +56,7 @@ public class Farmacia<T> {
    
  
     
-    }
+    
 
  
     

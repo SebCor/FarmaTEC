@@ -10,6 +10,11 @@ public class Lista_Medicamentos {
     Nodo tail;
     int position;
     int size;
+    public int Cantidad_Disponible;
+    
+    //Medicamento ins = new Medicamento();
+    
+    
     
     public Lista_Medicamentos(){
         this.head = new Nodo();
@@ -17,17 +22,23 @@ public class Lista_Medicamentos {
         this.tail = this.head;
         this.size = 0;
         this.position = -1;
+        
     }
     
     public Lista_Medicamentos(Lista_Medicamentos AA){
         
     }
     
-     public void append(Object element){
-        Nodo newmedicamento = new Nodo (element);
+     public void append(Medicamento medicamento){
+         
+ 
+         
+        Nodo newmedicamento = new Nodo (medicamento);
         this.tail.setNext(newmedicamento);
         this.tail = newmedicamento;
         this.size++;
+        medicamento.Cantidad_Disponible++;
+        
     }
     
     
@@ -65,7 +76,7 @@ public class Lista_Medicamentos {
     
     
     public void remove() {
-		
+     
 		if ((this.head == this.current) && (this.head == this.tail)){
 			System.out.println("Lista vacÃ­a, no se puede remover ningÃºn elemento");
 			return;
@@ -89,6 +100,9 @@ public class Lista_Medicamentos {
 		
 		//disminuir el tamaño
 		this.size--;
+                
+                
+                
                 
     }
                 

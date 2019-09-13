@@ -4,6 +4,7 @@ package farmatec;
 
 public class Nodo {
     
+    private Medicamento Data;
     private Object elemento;
     private Nodo next;
     
@@ -37,6 +38,9 @@ public class Nodo {
         this.next = next;
     }
     
-    
+    public Medicamento getData(){
+        return this.Data;
+        
+    }
     
 }
