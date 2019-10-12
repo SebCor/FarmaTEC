@@ -1,8 +1,9 @@
 package tec.plane;
 
+import java.util.Random;
+
 public class User {
 
-    //Atributos
     private String Nombre;
     private String FechaNacimiento;
     private int pasaporte;
@@ -120,12 +121,10 @@ public class User {
     /**
      * @param asiento the asiento to set
      */
-    /// A nivel de interfaz
-    // contador=
-    // ref= 0,1,2
-    //V
-    //C
-    //P
+    Random num = new Random();
+
+    int contador = num.nextInt(100);
+
     // contador  ,user.getplanlealtad, ref  
     public void setAsiento(int contador, String PlanLealtad, int ref) {
 
