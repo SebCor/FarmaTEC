@@ -1,17 +1,15 @@
-
 package tec.plane;
 
-
 public class User {
-    
+
     private String Nombre;
     private String FechaNacimiento;
-    private int pasaporte; 
+    private int pasaporte;
     private String Nacionalidad;
     private String origin;
     private String destiny;
     private String planLealtad;
-    private int asiento;
+    private String asiento;
 
     /**
      * @return the Nombre
@@ -114,15 +112,52 @@ public class User {
     /**
      * @return the asiento
      */
-    public int getAsiento() {
+    public String getAsiento() {
         return asiento;
     }
 
     /**
      * @param asiento the asiento to set
      */
-    public void setAsiento(int asiento) {
-        this.asiento = asiento;
+    /// A nivel de interfaz
+    // contador=
+    // ref= 0,1,2
+    //V
+    //C
+    //P
+    // contador  ,user.getplanlealtad, ref  
+    public void setAsiento(int contador, String PlanLealtad, int ref) {
+
+        char pos = 'X';
+
+        if (ref == 0) {
+            pos = 'V';
+        }
+
+        if (ref == 1) {
+            pos = 'C';
+        }
+
+        if (ref == 2) {
+            pos = 'P';
+        }
+
+        String ident = "Unknown";
+
+        if (PlanLealtad.equalsIgnoreCase("Ingreso Especial")) {
+            ident = "IE";
+        }
+        if (PlanLealtad.equalsIgnoreCase("Oro")) {
+            ident = "OR";
+        }
+        if (PlanLealtad.equalsIgnoreCase("Platino")) {
+            ident = "PL";
+        }
+        if (PlanLealtad.equalsIgnoreCase("Economico")) {
+            ident = "EC";
+        }
+
+        this.asiento = ident + contador + ref;
     }
-    
+
 }

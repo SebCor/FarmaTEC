@@ -22,7 +22,7 @@ public class TECPlane {
         CheckIn prioridad = new CheckIn();
         
         
-        Pedro.setAsiento(8);
+        
         Pedro.setDestiny("Portugal");
         Pedro.setFechaNacimiento("10-09-17");
         Pedro.setNacionalidad("Costarricense");
@@ -33,7 +33,7 @@ public class TECPlane {
         
         
         
-        Alex.setAsiento(19);
+        
         Alex.setDestiny("Alemania");
         Alex.setFechaNacimiento("18-09-18");
         Alex.setNacionalidad("Costarricense");
@@ -43,7 +43,7 @@ public class TECPlane {
         Alex.setPasaporte(1919182);
         
         
-        Maria.setAsiento(24);
+       
         Maria.setDestiny("Francia");
         Maria.setFechaNacimiento("11-10-00");
         Maria.setNacionalidad("Costarricense");
@@ -53,7 +53,7 @@ public class TECPlane {
         Maria.setPasaporte(726789);
         
         
-        Carla.setAsiento(99);
+        
         Carla.setDestiny("Belgica");
         Carla.setFechaNacimiento("12-08-00");
         Carla.setNacionalidad("Costarricense");
@@ -62,7 +62,7 @@ public class TECPlane {
         Carla.setPlanLealtad("Economico");
         Carla.setPasaporte(17718);
         
-        Carlos.setAsiento(99);
+      
         Carlos.setDestiny("Belgica");
         Carlos.setFechaNacimiento("12-08-00");
         Carlos.setNacionalidad("Costarricense");
@@ -82,7 +82,7 @@ public class TECPlane {
         // EN ESTE ORDEN DE PLAN ESTAN INGRESANDO A LA COLA NORMAL
         cola.agregaracola(Carla); // Economico
         cola.agregaracola(Carlos);  //Oro
-        cola.agregaracola(Alex);   // Oro
+        cola.agregaracola(Alex);   // Oro            // Carla,Carlos,Alex,Maria,Pedro
         cola.agregaracola(Maria); // Platino
         cola.agregaracola(Pedro);  //Especial
         
