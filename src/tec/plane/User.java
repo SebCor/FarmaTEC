@@ -2,6 +2,7 @@ package tec.plane;
 
 public class User {
 
+    //Atributos
     private String Nombre;
     private String FechaNacimiento;
     private int pasaporte;
